@@ -1,0 +1,33 @@
+
+{{#if user}}
+
+<h5> Welcome Back {{user.username}} </h5>
+<ul class="alt">
+<li><a href="/{{role}}s/classes ">My classes</a></li>
+<li><a href="/users/logout">logout</a></li>
+</ul>
+{{else}}
+<form class="form-signin" method="post" action="/users/login">
+    <img class="mb-4" src="#" alt="" width="72" height="72">
+     <!-- Message error login-->
+        {{#if error}}
+        <div class="alert alert-danger"><i class="icon-remove-sign icon-large"></i>
+            {{error}}
+            <a href="#close" class="icon-remove"></a>
+        </div>
+        {{/if}}
+                  
+    <h1 class=" card-title h3 mb-3 font-weight-normal">Log-in</h1>
+    <div class="card-body">
+        <label class="sr-only">User Name</label>
+        <input type="text" name="username" class="form-control" placeholder="User Name"  autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Password" >
+        <div class="checkbox mb-3">
+            <label>
+            </div>
+            <input type="checkbox" value="remember-me"> Remember me</label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>
+{{/if}}

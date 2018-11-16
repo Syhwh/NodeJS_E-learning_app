@@ -1,0 +1,29 @@
+<H2> {{class.title}} </H2>
+    <h6> {{class.code}} </h6>
+    <p> 
+        <strong>Instructor:</strong> {{class.instructor}}
+    </p>
+<p>
+    {{class.description}}
+</p>
+<p>
+    <strong>Prerequisites:</strong> {{class.prerequisites}} 
+</p>
+
+<ul class="alt">
+    {{#each class.lessons}}
+<li> {{lesson_title}} </li>
+    {{/each}}
+</ul>
+
+{{#if user}}
+    <form id="classRegForm" method="POST" action="/{{role}}s/classes/register">
+        <input type="hidden" name="student_id" value="{{user._id}} ">
+        <input type="hidden" name="class_id" value="{{class._id}} ">
+        <input type="hidden" name="class_code" value="{{class.code}} ">
+        <input type="hidden" name="class_title" value="{{class.title}} ">
+        <input type="submit" class="button" value="Register for this class">
+    </form>
+{{else}}
+<P>You must be logged in for this class</P>
+{{/if}}

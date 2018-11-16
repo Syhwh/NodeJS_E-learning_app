@@ -1,0 +1,185 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./favicon.ico">
+
+    <title>E-learning</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+ <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">E-School</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/classes">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">Fees</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+<main role="main">
+   <!--Message succes  -->
+                          {{#if success_msg}}
+                            <div class="alert alert-success"><i class="icon-remove-sign icon-large"></i>
+                              {{success_msg}}
+                             <a href="#close" class="icon-remove"></a>
+                            </div>
+                          {{/if}}
+                          <!-- Message error-->
+                           {{#if error_msg}}
+                            <div class="alert alert-danger"><i class="icon-remove-sign icon-large"></i>
+                              {{error_msg}}
+                             <a href="#close" class="icon-remove"></a>
+                            </div>
+                          {{/if}}
+
+                         
+    <div class="back-img">
+        <div class=" container">
+            <div class="row">
+                <div class="col-md-9">
+                         
+                    <div class="jumbotron">
+                        <div class="container">
+                          
+                            {{{body}}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 card bg-light mb-3">
+                    {{>login}}
+                </div>
+            </div>
+        </div>     
+    </div> <!-- Cierra imagen -->
+    {{>classes}}
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>E-learning example is &copy;, but please download and customize it for yourself!</p>
+        </div>
+    </footer>
+
+    <section class="section pre-footer-default">
+        <div class="container-wide">
+          <div class="row row-40">
+            <div class="col-md-12 col-xl-4">
+              <div class="row">
+                <div class="col-md-4 col-xl-4 col-xl-6"><a class="brand-logo brand-white brand-grouped" href="/"><img src="#" width="138" height="18" alt=""><span class="brand-slogan">National University</span></a></div>
+                <div class="col-md-4 col-xl-4 col-xl-6">
+                  <ul class="list list-md">
+                    <li>
+                      <p>4578 Marmora St,<br class="d-none d-xl-inline">Chicago D04 89GR.</p>
+                    </li>
+                    <li>
+                      <p>Telephone:<a class="link-white" href="callto:#"> 1-800-1234-567</a></p>
+                    </li>
+                    <li>
+                      <p>E-mail:<a class="link" href="mailto:#"> mail@demolink.org</a></p>
+                    </li>
+                  </ul>
+                  <div class="group-xs social-md"><a class="link-secondary fa fa-tumblr-square" href="#"></a><a class="link-secondary fa fa-pinterest" href="#"></a><a class="link-secondary fa fa-soundcloud" href="#"></a><a class="link-secondary fa fa-vimeo-square" href="#"></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-xl-4">
+              <div class="row">
+                <div class="col-md-6 col-xl-4 col-xl-6">
+                  <h6 class="title">Information</h6>
+                  <ul class="list list-md">
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#">Academic Calendar</a></li>
+                    <li><a href="#">Maps &amp; Directions</a></li>
+                    <li><a href="#">Parking &amp; Transportation</a></li>
+                    <li><a href="#">Emergency</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-6 col-xl-4 col-xl-6">
+                  <h6 class="title">Campus Values</h6>
+                  <ul class="list list-md">
+                    <li><a href="#">Equity, Diversity &amp; Inclusion</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Campus Statement</a></li>
+                    <li><a href="#">Volunteerism</a></li>
+                  </ul>
+                  <h6 class="title">Event Venues</h6>
+                  <ul class="list list-md">
+                    <li><a href="#">Conference Center</a></li>
+                    <li><a href="#">Event Planning</a></li>
+                    <li><a href="#">Film Production</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-4">
+              <div class="row">
+                <div class="col-md-12 col-xl-4 col-xl-6">
+                  <h6 class="title">Schools</h6>
+                  <ul class="list list-md">
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Earth, Energy &amp; Environmental Sciences</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Engineering</a></li>
+                    <li><a href="#">Humanities &amp; Sciences</a></li>
+                    <li><a href="#">Law</a></li>
+                    <li><a href="#">Medicine</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Bootstrap core JavaScript
+    Placed at the end of the document so the pages load faster 
+    ================================================== -->
+     
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="/javascripts/popper.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/holder/holder.min.js"></script> 
+  </body>
+</html>
+<!--/assets/js/vendor/.
+dist/js/bootstrap.min.js
+../../assets/js/vendor/holder.min.js"-->
