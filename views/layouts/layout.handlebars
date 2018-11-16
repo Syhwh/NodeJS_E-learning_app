@@ -13,8 +13,17 @@
     <!-- Bootstrap core CSS -->
     <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
 
+    <link href="/stylesheets/kingcomposer.min.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href="/stylesheets/demo.css" rel="stylesheet">
+
+
+
+<!-- ####################################################-->
+
+
   </head>
 
   <body>
@@ -52,19 +61,19 @@
     </nav>
 <main role="main">
    <!--Message succes  -->
-                          {{#if success_msg}}
-                            <div class="alert alert-success"><i class="icon-remove-sign icon-large"></i>
-                              {{success_msg}}
-                             <a href="#close" class="icon-remove"></a>
-                            </div>
-                          {{/if}}
-                          <!-- Message error-->
-                           {{#if error_msg}}
-                            <div class="alert alert-danger"><i class="icon-remove-sign icon-large"></i>
-                              {{error_msg}}
-                             <a href="#close" class="icon-remove"></a>
-                            </div>
-                          {{/if}}
+    {{#if success_msg}}
+    <div class="alert alert-success"><i class="icon-remove-sign icon-large"></i>
+    {{success_msg}}
+    <a href="#close" class="icon-remove"></a>
+    </div>
+    {{/if}}
+    <!-- Message error-->
+    {{#if error_msg}}
+    <div class="alert alert-danger"><i class="icon-remove-sign icon-large"></i>
+     {{error_msg}}
+     <a href="#close" class="icon-remove"></a>
+     </div>
+     {{/if}}
 
                          
     <div class="back-img">
@@ -84,8 +93,26 @@
                 </div>
             </div>
         </div>     
-    </div> <!-- Cierra imagen -->
+    </div>
+    
+    
+
+    
+    
+    
+     <!-- Cierra imagen -->
+
+
+
+
+
+
+
     {{>classes}}
+
+
+
+
     </main>
 
     <footer class="text-muted">
@@ -170,6 +197,8 @@
         </div>
       </section>
 
+
+
     <!-- Bootstrap core JavaScript
     Placed at the end of the document so the pages load faster 
     ================================================== -->
@@ -178,6 +207,21 @@
     <script src="/javascripts/popper.min.js"></script>
     <script src="/javascripts/bootstrap.min.js"></script>
     <script src="/javascripts/holder/holder.min.js"></script> 
+    <script src="/javascripts/jquery.waypoints.min.js"></script>
+    <script src="/javascripts/jquery.counterup.min.js"></script>
+
+<!--SCRIPT DELETE-->
+
+<script>
+        jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        });
+    </script>
+
+
   </body>
 </html>
 <!--/assets/js/vendor/.

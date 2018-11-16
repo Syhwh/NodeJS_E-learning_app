@@ -102,3 +102,18 @@ border-bottom: 5px;
 .form-check-label{
   width: 300px !important ;
 }
+
+.single-item2 {
+  background: #f6f6f6 none repeat scroll 0 0;
+  border-bottom: 3px solid #3c208a;
+  padding: 0 35px;
+  transition: all 0.3s ease 0s;
+  margin-bottom: 20px;
+}
+.banner{
+  background-color: rgb(16, 12, 65) !important;
+}
+
+.kc-elm.kc-css-984691 .section-title-wrapper::after {
+  background: rgba(0, 0, 0, 0) url("http://demo.wphash.com/educat/wp-content/uploads/2018/05/cap-white.jpg") no-repeat scroll 0 0;
+}
